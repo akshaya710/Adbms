@@ -1,0 +1,296 @@
+use INVOICE;
+'switched to db INVOICE'
+db.COLLECTION.("product");
+Error: clone(t={}){const r=t.loc||{};return e({loc:new Position("line"in r?r.line:this.loc.line,"column"in r?r.column:...<omitted>...)} could not be cloned.
+db.createCollection("CUSTOMER")
+{ ok: 1 }
+db.createCollection("PRODUCT")
+{ ok: 1 }
+show collections
+CUSTOMER
+PRODUCT
+db.CUSTOMER insertOne({name:"Anju",address:"Anju Bhavan",city:"Malapuram",age:"40",phn_no:"123456789"})
+Error: clone(t={}){const r=t.loc||{};return e({loc:new Position("line"in r?r.line:this.loc.line,"column"in r?r.column:...<omitted>...)} could not be cloned.
+db.CUSTOMER.insertOne({name:"Anju",address:"Anju Bhavan",city:"Malapuram",age:"40",phn_no:"1234567889"})
+{ acknowledged: true,
+  insertedId: ObjectId("62a6c042fd32ea36a0b0f933") }
+db.CUSTOMER.insertMany([{name:"Sarath",address:"Sarath Nivas",city:"calicut",age:"45",phn_no:"987654655"},{name:"Nayana",address:"nayanas"city:"kozhikode",age:"50",phn_no:"98653456344"}{name:"jimin",address:"abcd",city:"ranni",age:"30"}])},{
+Error: clone(t={}){const r=t.loc||{};return e({loc:new Position("line"in r?r.line:this.loc.line,"column"in r?r.column:...<omitted>...)} could not be cloned.
+ db.CUSTOMER.insertMany([{name: "Sarath",address: "Sarath Nivas",city: "Calicut",age:"45"  ,phone_no: "9886409789"},{name: "Nayana",address: "Nayans",city: "Kozhikode",age:"50"  ,phone_no: "97890642"},{name: "jimin",address: "abcd",city: "kozhikode",age:"34",phone_no:  "9863665432"},{name: "Surya",address: "white house",city: "wandoor",age:"43",phone_no:  "9048857036"}]) 
+{ acknowledged: true,
+  insertedIds: 
+   { '0': ObjectId("62a6c4a1fd32ea36a0b0f934"),
+     '1': ObjectId("62a6c4a1fd32ea36a0b0f935"),
+     '2': ObjectId("62a6c4a1fd32ea36a0b0f936"),
+     '3': ObjectId("62a6c4a1fd32ea36a0b0f937") } }
+ db.PRODUCT.insertMany([{productName:"pen",price:"10",quantity:"10"},{productName:"pe ncil",price:"10",quantity:"3"},{productName:"sharpner",price:"5",quantity:"4"},{productName :"eraser",price:"8",quantity:"7"}]) 
+{ acknowledged: true,
+  insertedIds: 
+   { '0': ObjectId("62a6c4d2fd32ea36a0b0f938"),
+     '1': ObjectId("62a6c4d2fd32ea36a0b0f939"),
+     '2': ObjectId("62a6c4d2fd32ea36a0b0f93a"),
+     '3': ObjectId("62a6c4d2fd32ea36a0b0f93b") } }
+db.CUSTOMER.find()
+{ _id: ObjectId("62a6c042fd32ea36a0b0f933"),
+  name: 'Anju',
+  address: 'Anju Bhavan',
+  city: 'Malapuram',
+  age: '40',
+  phn_no: '1234567889' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f934"),
+  name: 'Sarath',
+  address: 'Sarath Nivas',
+  city: 'Calicut',
+  age: '45',
+  phone_no: '9886409789' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f935"),
+  name: 'Nayana',
+  address: 'Nayans',
+  city: 'Kozhikode',
+  age: '50',
+  phone_no: '97890642' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f936"),
+  name: 'jimin',
+  address: 'abcd',
+  city: 'kozhikode',
+  age: '34',
+  phone_no: '9863665432' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f937"),
+  name: 'Surya',
+  address: 'white house',
+  city: 'wandoor',
+  age: '43',
+  phone_no: '9048857036' }
+db.CUSTOMER.find().pritty()
+TypeError: db.CUSTOMER.find().pritty is not a function
+db.CUSTOMER.find().pritty()
+TypeError: db.CUSTOMER.find().pritty is not a function
+db.CUSTOMER.find().pretty()
+{ _id: ObjectId("62a6c042fd32ea36a0b0f933"),
+  name: 'Anju',
+  address: 'Anju Bhavan',
+  city: 'Malapuram',
+  age: '40',
+  phn_no: '1234567889' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f934"),
+  name: 'Sarath',
+  address: 'Sarath Nivas',
+  city: 'Calicut',
+  age: '45',
+  phone_no: '9886409789' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f935"),
+  name: 'Nayana',
+  address: 'Nayans',
+  city: 'Kozhikode',
+  age: '50',
+  phone_no: '97890642' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f936"),
+  name: 'jimin',
+  address: 'abcd',
+  city: 'kozhikode',
+  age: '34',
+  phone_no: '9863665432' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f937"),
+  name: 'Surya',
+  address: 'white house',
+  city: 'wandoor',
+  age: '43',
+  phone_no: '9048857036' }
+db.PRODUCT.find().pretty()
+{ _id: ObjectId("62a6c4d2fd32ea36a0b0f938"),
+  productName: 'pen',
+  price: '10',
+  quantity: '10' }
+{ _id: ObjectId("62a6c4d2fd32ea36a0b0f939"),
+  productName: 'pe ncil',
+  price: '10',
+  quantity: '3' }
+{ _id: ObjectId("62a6c4d2fd32ea36a0b0f93a"),
+  productName: 'sharpner',
+  price: '5',
+  quantity: '4' }
+{ _id: ObjectId("62a6c4d2fd32ea36a0b0f93b"),
+  productName: 'eraser',
+  price: '8',
+  quantity: '7' }
+db.CUSTOMER.updateOne.({"city":"wandoor"},{$set:{"city":"kochi"}})
+Error: clone(t={}){const r=t.loc||{};return e({loc:new Position("line"in r?r.line:this.loc.line,"column"in r?r.column:...<omitted>...)} could not be cloned.
+db.CUSTOMER.updateOne({"city":"wandoor"},{$set:{"city":"kochi"}})
+{ acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0 }
+db.CUSTOMER.deleteOne({city:"Calicult"})
+{ acknowledged: true, deletedCount: 0 }
+db.CUSTOMERfind().pretty()
+TypeError: db.CUSTOMERfind is not a function
+db.CUSTOMER find().pretty()
+Error: clone(t={}){const r=t.loc||{};return e({loc:new Position("line"in r?r.line:this.loc.line,"column"in r?r.column:...<omitted>...)} could not be cloned.
+db.CUSTOMERfind().pretty()
+TypeError: db.CUSTOMERfind is not a function
+db.CUSTOMER.find().pretty()
+{ _id: ObjectId("62a6c042fd32ea36a0b0f933"),
+  name: 'Anju',
+  address: 'Anju Bhavan',
+  city: 'Malapuram',
+  age: '40',
+  phn_no: '1234567889' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f934"),
+  name: 'Sarath',
+  address: 'Sarath Nivas',
+  city: 'Calicut',
+  age: '45',
+  phone_no: '9886409789' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f935"),
+  name: 'Nayana',
+  address: 'Nayans',
+  city: 'Kozhikode',
+  age: '50',
+  phone_no: '97890642' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f936"),
+  name: 'jimin',
+  address: 'abcd',
+  city: 'kozhikode',
+  age: '34',
+  phone_no: '9863665432' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f937"),
+  name: 'Surya',
+  address: 'white house',
+  city: 'kochi',
+  age: '43',
+  phone_no: '9048857036' }
+db.CUSTOMER.find({$or:[{"city":"kozhikode"},{"city":"malapuram"}]}).pretty()
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f936"),
+  name: 'jimin',
+  address: 'abcd',
+  city: 'kozhikode',
+  age: '34',
+  phone_no: '9863665432' }
+db.CUSTMER.find({"age":{$lt:"50"}}).pretty()
+db.CUSTOMER.find({"age":{$lt:"50"}}).pretty()
+{ _id: ObjectId("62a6c042fd32ea36a0b0f933"),
+  name: 'Anju',
+  address: 'Anju Bhavan',
+  city: 'Malapuram',
+  age: '40',
+  phn_no: '1234567889' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f934"),
+  name: 'Sarath',
+  address: 'Sarath Nivas',
+  city: 'Calicut',
+  age: '45',
+  phone_no: '9886409789' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f936"),
+  name: 'jimin',
+  address: 'abcd',
+  city: 'kozhikode',
+  age: '34',
+  phone_no: '9863665432' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f937"),
+  name: 'Surya',
+  address: 'white house',
+  city: 'kochi',
+  age: '43',
+  phone_no: '9048857036' }
+db.CUSTOMER.find({"age":{$gte:"40"}}).pretty()
+{ _id: ObjectId("62a6c042fd32ea36a0b0f933"),
+  name: 'Anju',
+  address: 'Anju Bhavan',
+  city: 'Malapuram',
+  age: '40',
+  phn_no: '1234567889' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f934"),
+  name: 'Sarath',
+  address: 'Sarath Nivas',
+  city: 'Calicut',
+  age: '45',
+  phone_no: '9886409789' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f935"),
+  name: 'Nayana',
+  address: 'Nayans',
+  city: 'Kozhikode',
+  age: '50',
+  phone_no: '97890642' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f937"),
+  name: 'Surya',
+  address: 'white house',
+  city: 'kochi',
+  age: '43',
+  phone_no: '9048857036' }
+db.CUSTOMER.find({"city":{$ne:"kozhikode"}}).pretty()
+{ _id: ObjectId("62a6c042fd32ea36a0b0f933"),
+  name: 'Anju',
+  address: 'Anju Bhavan',
+  city: 'Malapuram',
+  age: '40',
+  phn_no: '1234567889' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f934"),
+  name: 'Sarath',
+  address: 'Sarath Nivas',
+  city: 'Calicut',
+  age: '45',
+  phone_no: '9886409789' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f935"),
+  name: 'Nayana',
+  address: 'Nayans',
+  city: 'Kozhikode',
+  age: '50',
+  phone_no: '97890642' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f937"),
+  name: 'Surya',
+  address: 'white house',
+  city: 'kochi',
+  age: '43',
+  phone_no: '9048857036' }
+ db.CUSTOMER.find({$nor:[{"city":"kochi"},{"city":"Malapuram"}]}).pretty() 
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f934"),
+  name: 'Sarath',
+  address: 'Sarath Nivas',
+  city: 'Calicut',
+  age: '45',
+  phone_no: '9886409789' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f935"),
+  name: 'Nayana',
+  address: 'Nayans',
+  city: 'Kozhikode',
+  age: '50',
+  phone_no: '97890642' }
+{ _id: ObjectId("62a6c4a1fd32ea36a0b0f936"),
+  name: 'jimin',
+  address: 'abcd',
+  city: 'kozhikode',
+  age: '34',
+  phone_no: '9863665432' }
+db.PRODUCT.distinct("productName") 
+[ 'eraser', 'pe ncil', 'pen', 'sharpner' ]
+db.CUSTOMER.find().sort({name:1}).pretty
+[Function: pretty] {
+  returnType: 'this',
+  serverVersions: [ '0.0.0', '999.999.999' ],
+  apiVersions: [ 0, Infinity ],
+  topologies: [ 'ReplSet', 'Sharded', 'LoadBalanced', 'Standalone' ],
+  returnsPromise: false,
+  deprecated: false,
+  platforms: [ 0, 1, 2 ],
+  isDirectShellCommand: false,
+  acceptsRawInput: false,
+  shellCommandCompleter: undefined,
+  help: [Function (anonymous)] Help
+}
+db.CUSTOMER.aggregate([{$count:"city"}])
+{ city: 5 }
+db.CUSTOMER.aggregate([{$group:{_id: "$city",total:{$sum:1}}}])
+{ _id: 'Malapuram', total: 1 }
+{ _id: 'Calicut', total: 1 }
+{ _id: 'Kozhikode', total: 1 }
+{ _id: 'kochi', total: 1 }
+{ _id: 'kozhikode', total: 1 }
+db.CUSTOMER.aggregate([{$group:{_id:"",min_age:{$min:"$age"},max_age:{$max:"$age"} }}]) 
+{ _id: '', min_age: '34', max_age: '50' }
+db.CUSTOMER.aggregate([{$group:{_id:"$city",min_age:{$min:"$age"},max_age:{$max:"$ age"}}}])
+{ _id: 'Malapuram', min_age: '40', max_age: null }
+{ _id: 'Calicut', min_age: '45', max_age: null }
+{ _id: 'Kozhikode', min_age: '50', max_age: null }
+{ _id: 'kochi', min_age: '43', max_age: null }
+{ _id: 'kozhikode', min_age: '34', max_age: null }
